@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Essentials Co. LLC - Autonomous Store</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .glass-morphism { background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+    .glow-purple:hover { box-shadow: 0 0 25px rgba(168, 85, 247, 0.4); }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-900 text-xs py-2 px-4 text-center border-b border-slate-800 flex justify-between items-center">
+    <div class="flex items-center gap-2 mx-auto">
+      <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+      <span class="font-medium">AI Store Autopilot Active</span>
+      <span class="text-slate-400">| Direct Cash App Payout Settlement: <strong class="text-emerald-400 font-mono">$WilliamIIWoodley</strong> (William I. I. Woodley)</span>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header class="sticky top-0 z-40 glass-morphism border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-purple-600 to-indigo-500 flex items-center justify-center font-black text-xl shadow-lg shadow-purple-500/20">UE</div>
+        <div>
+          <h1 class="font-extrabold text-lg tracking-tight bg-gradient-to-r from-white via-slate-200 to-purple-400 bg-clip-text text-transparent">Urban Essentials Co. LLC</h1>
+          <p class="text-xs text-slate-400">AI-Managed Next-Gen Storefront</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <button onclick="toggleSection('storefront')" class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-sm font-semibold transition">Storefront</button>
+        <button onclick="toggleSection('dashboard')" class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-sm font-semibold transition text-purple-400"><i class="fa-solid fa-robot mr-2"></i>AI Control Panel</button>
+        <button onclick="toggleSection('embed')" class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-sm font-semibold transition text-indigo-400"><i class="fa-solid fa-code mr-2"></i>Get Embed Code</button>
+        <button onclick="openCart()" class="relative p-2.5 rounded-xl bg-purple-600/20 border border-purple-500/30 text-purple-300 hover:bg-purple-600/30 transition">
+          <i class="fa-solid fa-bag-shopping text-lg"></i>
+          <span id="cart-count" class="absolute -top-1 -right-1 bg-purple-500 text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN STORE CONTENT -->
+  <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8" id="main-content">
+    
+    <!-- CATEGORY FILTER BAR -->
+    <div class="flex items-center justify-between gap-4 mb-8 overflow-x-auto pb-2">
+      <div class="flex items-center gap-2">
+        <button class="px-4 py-2 rounded-full bg-purple-600 text-white text-sm font-medium">All Departments</button>
+        <button class="px-4 py-2 rounded-full bg-slate-900 border border-slate-800 text-slate-300 hover:border-purple-500/50 text-sm font-medium">Fashion</button>
+        <button class="px-4 py-2 rounded-full bg-slate-900 border border-slate-800 text-slate-300 hover:border-purple-500/50 text-sm font-medium">Techwear</button>
+        <button class="px-4 py-2 rounded-full bg-slate-900 border border-slate-800 text-slate-300 hover:border-purple-500/50 text-sm font-medium">Cosmetics</button>
+        <button class="px-4 py-2 rounded-full bg-slate-900 border border-slate-800 text-slate-300 hover:border-purple-500/50 text-sm font-medium">Home & Auto</button>
+        <button class="px-4 py-2 rounded-full bg-slate-900 border border-slate-800 text-slate-300 hover:border-purple-500/50 text-sm font-medium">Pet Care</button>
+        <button class="px-4 py-2 rounded-full bg-slate-900 border border-slate-800 text-slate-300 hover:border-purple-500/50 text-sm font-medium">Camping</button>
+      </div>
+      <div class="text-xs text-slate-400 font-mono flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+        AI Automated Dropship Engine Active
+      </div>
+    </div>
+
+    <!-- PRODUCT CATALOG -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="product-grid">
+      
+      <!-- PRODUCT CARD 1 -->
+      <div class="glass-morphism rounded-2xl overflow-hidden border border-slate-800 hover:border-purple-500/50 transition glow-purple flex flex-col">
+        <div class="relative h-64 bg-slate-900 flex items-center justify-center p-6">
+          <span class="absolute top-3 left-3 bg-purple-600/80 backdrop-blur-md text-white text-xs px-2.5 py-1 rounded-full font-bold">TODAY'S FASHION</span>
+          <span class="absolute top-3 right-3 bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs px-2.5 py-1 rounded-full font-medium">🔥 42 sold this hour</span>
+          <i class="fa-solid fa-shirt text-7xl text-purple-400/40"></i>
+        </div>
+        <div class="p-5 flex-grow flex flex-col justify-between">
+          <div>
+            <h3 class="font-bold text-lg text-white">Urban Oversized Heavyweight Hoodie</h3>
+            <p class="text-xs text-slate-400 mt-1">Premium 450GSM cotton fleece with drop-shoulder modern street fit.</p>
+          </div>
+          <div class="mt-4 flex items-center justify-between">
+            <div>
+              <span class="text-2xl font-black text-white">$68.00</span>
+              <span class="text-xs text-slate-500 line-through ml-2">$95.00</span>
+            </div>
+            <button onclick="addToCart('Urban Oversized Heavyweight Hoodie', 68.00)" class="px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white text-sm font-bold rounded-xl shadow-lg shadow-purple-600/20 transition">Add to Bag</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT CARD 2 -->
+      <div class="glass-morphism rounded-2xl overflow-hidden border border-slate-800 hover:border-purple-500/50 transition glow-purple flex flex-col">
+        <div class="relative h-64 bg-slate-900 flex items-center justify-center p-6">
+          <span class="absolute top-3 left-3 bg-indigo-600/80 backdrop-blur-md text-white text-xs px-2.5 py-1 rounded-full font-bold">TOMORROW'S TECHWEAR</span>
+          <span class="absolute top-3 right-3 bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs px-2.5 py-1 rounded-full font-medium">⚡ High Demand</span>
+          <i class="fa-solid fa-vest-patches text-7xl text-indigo-400/40"></i>
+        </div>
+        <div class="p-5 flex-grow flex flex-col justify-between">
+          <div>
+            <h3 class="font-bold text-lg text-white">Cyberpunk Smart-Heated Weather Jacket</h3>
+            <p class="text-xs text-slate-400 mt-1">Graphene thermal elements, smartphone temp control, waterproof technical shell.</p>
+          </div>
+          <div class="mt-4 flex items-center justify-between">
+            <div>
+              <span class="text-2xl font-black text-white">$185.00</span>
+            </div>
+            <button onclick="addToCart('Cyberpunk Smart-Heated Weather Jacket', 185.00)" class="px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white text-sm font-bold rounded-xl shadow-lg shadow-purple-600/20 transition">Add to Bag</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT CARD 3 -->
+      <div class="glass-morphism rounded-2xl overflow-hidden border border-slate-800 hover:border-purple-500/50 transition glow-purple flex flex-col">
+        <div class="relative h-64 bg-slate-900 flex items-center justify-center p-6">
+          <span class="absolute top-3 left-3 bg-pink-600/80 backdrop-blur-md text-white text-xs px-2.5 py-1 rounded-full font-bold">COSMETICS</span>
+          <i class="fa-solid fa-wand-magic-sparkles text-7xl text-pink-400/40"></i>
+        </div>
+        <div class="p-5 flex-grow flex flex-col justify-between">
+          <div>
+            <h3 class="font-bold text-lg text-white">Luminous Bio-Peptide Glow Serum</h3>
+            <p class="text-xs text-slate-400 mt-1">Clinical botanical formula for instant skin hydration and collagen restoration.</p>
+          </div>
+          <div class="mt-4 flex items-center justify-between">
+            <div>
+              <span class="text-2xl font-black text-white">$44.00</span>
+            </div>
+            <button onclick="addToCart('Luminous Bio-Peptide Glow Serum', 44.00)" class="px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white text-sm font-bold rounded-xl shadow-lg shadow-purple-600/20 transition">Add to Bag</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800 bg-slate-950 py-8 px-4 text-center text-xs text-slate-500">
+    <p>© 2026 Urban Essentials Co. LLC. All rights reserved.</p>
+    <p class="mt-1">Payout Account Beneficiary: <strong>William I. I. Woodley</strong> | Cash App Tag: <span class="text-emerald-400 font-mono">$WilliamIIWoodley</span></p>
+  </footer>
+
+  <script>
+    let cart = [];
+    function addToCart(item, price) {
+      cart.push({ item, price });
+      document.getElementById('cart-count').innerText = cart.length;
+      alert(item + ' added to your shopping bag!');
+    }
+  </script>
+</body>
+</html>
